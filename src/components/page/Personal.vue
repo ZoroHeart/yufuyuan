@@ -1,24 +1,24 @@
 <template>
     <div class="container">
-        <div class="base-info base-common">
+        <div class="base-info base-common" @click="goLogin">
             <div class="user-look">
                 <img :src="userLook" alt="">
             </div>
             <div class="user-name">
-                <p>名称ddddddddd</p>
-                <p><van-icon name="gem" size="0.4rem"/>会员等级</p>
+                <p>{{userName}}</p>
+                <p><van-icon name="gem" size="0.4rem"/>会员等级{{userVip}}</p>
             </div>
             <van-icon name="arrow" size="0.5rem" class="ico-set"/>
         </div>
         <div class="message-box">
             <div class="balance-count">
-                <p>余额</p><p>￥50000.00</p>
+                <p>余额</p><p>￥{{userYE}}</p>
             </div>
             <div class="integral-count">
-                <p>积分</p><p>10000</p>
+                <p>积分</p><p>{{userJF}}</p>
             </div>
             <div class="discounts-count">
-                <p>优惠券</p><p>121张</p>
+                <p>优惠券</p><p>{{userYHJ}}张</p>
             </div>
         </div>
         <div class="orders-box">
@@ -56,10 +56,34 @@
         data(){
             return {
                 userLook,
+                userMsg:0,
+                userName:"未登录,点击登录",
+                userVip:0,
+                userYE:0,
+                userJF:0,
+                userYHJ:0
             }
         },
         components:{
             tabBar
+        },
+        mounted() {
+            let userMessage = sessionStorage.getItem("loginName");
+            console.log(userMessage);
+            if(userMessage != "" && userMessage != null){
+                this.userName = userMessage;
+                this.userMsg=1;
+            }else{
+                this.userName="未登录,点击登录";
+                this.userVip=0;
+            }
+        },
+        methods:{
+            goLogin(){
+                if(this.userMsg ==0){
+                    this.$router.push('/login');
+                }
+            }
         }
     }
 </script>

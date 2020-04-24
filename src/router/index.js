@@ -4,9 +4,15 @@ import Home from '../components/page/Home.vue'
 import List from '../components/page/List.vue'
 import Car from '../components/page/Car.vue'
 import Personal from '../components/page/Personal.vue'
+import Login from '../components/page/Login.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
   {
     path: '/',
     name: 'Home',
