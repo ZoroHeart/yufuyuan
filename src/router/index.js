@@ -5,6 +5,7 @@ import List from '../components/page/List.vue'
 import Car from '../components/page/Car.vue'
 import Personal from '../components/page/Personal.vue'
 import Login from '../components/page/Login.vue'
+import UpdateMessage from '../components/page/UpdateMessage.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -37,7 +38,13 @@ const routes = [
     path: '/personal',
     name: 'Personal',
     component: Personal
-  }
+  },
+  {
+    path: '/updateMessage',
+    name: 'UpdateMessage',
+    component: UpdateMessage
+  },
+
 ]
 
 const router = new VueRouter({

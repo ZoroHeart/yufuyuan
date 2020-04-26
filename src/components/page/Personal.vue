@@ -68,11 +68,20 @@
             tabBar
         },
         mounted() {
-            let userMessage = sessionStorage.getItem("loginName");
-            console.log(userMessage);
-            if(userMessage != "" && userMessage != null){
-                this.userName = userMessage;
-                this.userMsg=1;
+            let logname = sessionStorage.getItem("names");
+            let logVip = sessionStorage.getItem("vips");
+            let logYE = sessionStorage.getItem("balances");
+            let logJF = sessionStorage.getItem("integrals");
+            let logYHJ = sessionStorage.getItem("discountCouponNums");
+
+            console.log(logname);
+            if(logname != "" && logname != null){
+                this.userName = logname;
+                this.userVip = logVip;
+                this.userYE = logYE;
+                this.userJF = logJF;
+                this.userYHJ = logYHJ;
+                this.userMsg = 1;
             }else{
                 this.userName="未登录,点击登录";
                 this.userVip=0;
@@ -82,6 +91,8 @@
             goLogin(){
                 if(this.userMsg ==0){
                     this.$router.push('/login');
+                }else{
+                    this.$router.push('/updateMessage');
                 }
             }
         }

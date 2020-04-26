@@ -19,4 +19,6 @@ export default {
   color: #2c3e50;
   font-size: 16px;
 }
+.van-nav-bar .van-icon{color: #07c160}
+.van-nav-bar__text{color: #07c160}
 </style>
