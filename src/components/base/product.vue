@@ -7,6 +7,7 @@
                   :title="item.name"
                   :thumb="item.imgUrl"
                   :origin-price="item.price"
+                  @click="goProductDetail"
         />
     </div>
 
@@ -16,6 +17,11 @@
     export default {
         name: "product",
         props:["productData"],
+        methods:{
+            goProductDetail(){
+                this.$router.push('/productDetail');
+            }
+        }
     }
 </script>
 

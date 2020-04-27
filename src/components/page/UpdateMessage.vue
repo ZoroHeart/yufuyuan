@@ -40,7 +40,12 @@
                     autosize
                     label="默认地址"
                     type="textarea"
+                    readonly
+                    @click="goAddress"
             />
+        </div>
+        <div>
+
         </div>
     </div>
 
@@ -57,6 +62,7 @@
                 showPicker: false,
                 currentDate: new Date(),
                 defaultAddress:"",//默认收货地址
+                showAddress: false,
             };
         },
 
@@ -77,6 +83,9 @@
                 }
                 return val;
             },
+            goAddress(){
+                this.$router.push('/addressLists');
+            }
         }
     }
 </script>

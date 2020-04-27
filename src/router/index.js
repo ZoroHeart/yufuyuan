@@ -6,6 +6,9 @@ import Car from '../components/page/Car.vue'
 import Personal from '../components/page/Personal.vue'
 import Login from '../components/page/Login.vue'
 import UpdateMessage from '../components/page/UpdateMessage.vue'
+import AddressLists from '../components/base/AddressLists.vue'
+import AddressEdits from '../components/base/AddressEdits.vue'
+import ProductDetail from '../components/base/productDetail.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -43,6 +46,21 @@ const routes = [
     path: '/updateMessage',
     name: 'UpdateMessage',
     component: UpdateMessage
+  },
+  {
+    path: '/addressLists',
+    name: 'AddressLists',
+    component: AddressLists
+  },
+  {
+    path: '/addressEdits',
+    name: 'AddressEdits',
+    component: AddressEdits
+  },
+  {
+    path: '/productDetail',
+    name: 'ProductDetail',
+    component: ProductDetail
   },
 
 ]

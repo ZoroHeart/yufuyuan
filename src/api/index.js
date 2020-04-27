@@ -13,5 +13,8 @@ let getSlidesData=()=>{
 let getProductData=()=>{
     return axios.get("/groupList");
 };
+let getAddressData=()=>{
+    return axios.get("/addressList");
+};
 
-export {getSlidesData,getProductData,getLogin};
+export {getSlidesData,getProductData,getLogin,getAddressData};
