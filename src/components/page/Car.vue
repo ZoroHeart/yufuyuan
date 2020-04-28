@@ -1,6 +1,19 @@
 <template>
     <div>
-        <h1>CAR</h1>
+        <div class="cartTitle">
+            <van-nav-bar
+                    title="购物车"
+                    left-text="返回"
+                    right-text="编辑"
+                    left-arrow
+                    @click-left="onClickLeft"
+            />
+        </div>
+        <div>
+            <div class="" v-for="">
+
+            </div>
+        </div>
         <tabBar :active="2"></tabBar>
     </div>
 </template>

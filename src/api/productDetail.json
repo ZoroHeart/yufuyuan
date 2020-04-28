@@ -1,0 +1,45 @@
+{
+      "price": 118,
+      "reducedPrice": 145,
+      "cumulativeSales": "2466",
+      "productName":"新西兰佳沛黄金奇异果10个，进口新鲜水果",
+      "intro": "时令鲜香享美味当季，猕猴桃营养丰富，被誉为营养全面水果，一颗猕猴桃含丰富维他命C，所含维生素E可供一日所需三分之一。",
+      "evaluation": [
+        {
+          "headPortrait": "../../assets/image/icontouxiang.png",
+          "userName": "梦懵猛",
+          "evaluateText": "超值，味道清脆可口，还不错哦哦哦！",
+          "evaluateTime": "2016-07-12"
+        },
+        {
+          "headPortrait": "../../assets/image/icontouxiang.png",
+          "userName": "哈哈哈的",
+          "evaluateText": "超值，味道清脆可口，还不错哦哦哦！",
+          "evaluateTime": "2016-07-18"
+        },
+        {
+          "headPortrait": "../../assets/image/icontouxiang.png",
+          "userName": "法国大苏打",
+          "evaluateText": "超值，味道清脆可口，还不错哦哦哦！",
+          "evaluateTime": "2016-07-19"
+        },
+        {
+          "headPortrait": "../../assets/image/icontouxiang.png",
+          "userName": "的话大概",
+          "evaluateText": "超值，味道清脆可口，还不错哦哦哦！",
+          "evaluateTime": "2016-07-20"
+        },
+        {
+          "headPortrait": "../../assets/image/icontouxiang.png",
+          "userName": "尽快结束的",
+          "evaluateText": "超值，味道清脆可口，还不错哦哦哦！",
+          "evaluateTime": "2016-07-21"
+        },
+        {
+          "headPortrait": "../../assets/image/icontouxiang.png",
+          "userName": "解放和家人",
+          "evaluateText": "超值，味道清脆可口，还不错哦哦哦！",
+          "evaluateTime": "2016-07-22"
+        }
+      ]
+}
