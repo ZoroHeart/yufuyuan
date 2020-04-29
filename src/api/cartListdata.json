@@ -1,0 +1,76 @@
+{
+  "cartData": [
+    {
+      "productCover": "../../assets/image/product/list_proimg0.jpg",
+      "productName": "海南小台农芒果5斤",
+      "productInfo": "海南三亚皮薄汁多甜度高，小台芒热带新鲜水果",
+      "productPrice": 129,
+      "productCount": 10,
+      "isSelected": false
+    },
+    {
+      "productCover": "../../assets/image/product/list_proimg1.jpg",
+      "productName": "浦江红心猕猴桃奇异果",
+      "productInfo": "新鲜水果四川特产时令猕猴桃30粒",
+      "productPrice": 62,
+      "productCount": 10,
+      "isSelected": false
+    },
+    {
+      "productCover": "../../assets/image/product/list_proimg2.jpg",
+      "productName": "海南红心木瓜8斤",
+      "productInfo": "海南三亚牛奶木瓜青木瓜",
+      "productPrice": 88,
+      "productCount": 10,
+      "isSelected": false
+    },
+    {
+      "productCover": "../../assets/image/product/list_proimg3.jpg",
+      "productName": "泰国龙眼2斤",
+      "productInfo": "果肉厚，果核小，晶莹剔透，圆润细嫩",
+      "productPrice": 29,
+      "productCount": 10,
+      "isSelected": false
+    },
+    {
+      "productCover": "../../assets/image/product/list_proimg4.jpg",
+      "productName": "泰国进口山竹3斤",
+      "productInfo": "超甜超糯，热带新鲜水果，死竹坏果包赔",
+      "productPrice": 89,
+      "productCount": 10,
+      "isSelected": false
+    },
+    {
+      "productCover": "../../assets/image/product/list_proimg5.jpg",
+      "productName": "海南小台农芒果5斤",
+      "productInfo": "海南三亚皮薄汁多甜度高，小台芒热带新鲜水果",
+      "productPrice": 64,
+      "productCount": 10,
+      "isSelected": false
+    },
+    {
+      "productCover": "../../assets/image/product/list_proimg6.jpg",
+      "productName": "江苏特小凤西瓜一个",
+      "productInfo": "黄壤西瓜，新鲜水果",
+      "productPrice": 32,
+      "productCount": 10,
+      "isSelected": false
+    },
+    {
+      "productCover": "../../assets/image/product/list_proimg7.jpg",
+      "productName": "海南小台农芒果5斤",
+      "productInfo": "海南三亚皮薄汁多甜度高，小台芒热带新鲜水果",
+      "productPrice": 129,
+      "productCount": 10,
+      "isSelected": false
+    },
+    {
+      "productCover": "../../assets/image/product/list_proimg8.jpg",
+      "productName": "陕西红富士10斤",
+      "productInfo": "海南三亚皮薄汁多甜度高，小台芒热带新鲜水果",
+      "productPrice": 49,
+      "productCount": 10,
+      "isSelected": false
+    }
+  ]
+}
