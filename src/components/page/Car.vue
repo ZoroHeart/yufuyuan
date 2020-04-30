@@ -7,6 +7,7 @@
                     right-text="编辑"
                     left-arrow
                     @click-left="onClickLeft"
+                    @click-right="onClickRight"
             />
         </div>
         <div class="cartList">
@@ -20,13 +21,12 @@
                         </div>
                     </div>
                 </van-checkbox>
-                <div class="cartNums"><van-stepper v-model="item.cartCount" /></div>
+                <div class="cartNums"><van-stepper v-model="item.productCount" /></div>
             </div>
         </div>
         <div class="cartSubmit">
-            <van-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit">
+            <van-submit-bar :price="sum" button-text="提交订单" @submit="onSubmit">
                 <van-checkbox v-model="isAll">全选</van-checkbox>
-
             </van-submit-bar>
         </div>
         <tabBar :active="2"></tabBar>
@@ -73,6 +73,9 @@
         methods:{
             onClickLeft(){
                 this.$router.back();
+            },
+            onClickRight(){
+                console.log("编辑");
             },
             remove(index){
                 this.cartListArr.splice(index,1);
@@ -121,7 +124,7 @@
                     this.cartListArr.forEach((item)=>{
                         total += item.isSelected ? item.productCount*item.productPrice : 0;
                     });
-                    return total;
+                    return total * 100;
                 }
             }
         }
