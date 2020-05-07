@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="cartSubmit">
-            <van-submit-bar :price="sum" button-text="提交订单" @submit="onSubmit">
+            <van-submit-bar :price="sum" button-text="结算" @submit="onSubmit">
                 <van-checkbox v-model="isAll">全选</van-checkbox>
             </van-submit-bar>
         </div>
@@ -83,18 +83,8 @@
             removeAll(){
                 this.cartListArr = this.cartListArr.filter(item=>!item.isSelected);
             },
-            submit(e){
-                this.cartListArr.push({
-                    isSelected:this.isSel,
-                    productCover:this.imgsp,
-                    productName:this.name,
-                    productPrice:this.price,
-                    productCount:this.snums
-                });
-                this.name = "";
-                this.price = "";
-                this.snums = "";
-                e.preventDefault();
+            onSubmit(){
+                this.$router.push('/submitOrder');
             }
         },
         filters:{

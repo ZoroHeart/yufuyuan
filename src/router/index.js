@@ -9,6 +9,7 @@ import UpdateMessage from '../components/page/UpdateMessage.vue'
 import AddressLists from '../components/base/AddressLists.vue'
 import AddressEdits from '../components/base/AddressEdits.vue'
 import ProductDetail from '../components/base/productDetail.vue'
+import SubmitOrder from '../components/page/SubmitOrder.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -62,6 +63,11 @@ const routes = [
     name: 'ProductDetail',
     component: ProductDetail
   },
+  {
+    path: '/submitOrder',
+    name: 'SubmitOrder',
+    component: SubmitOrder
+  }
 
 ]
 
