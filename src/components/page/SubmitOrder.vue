@@ -45,12 +45,26 @@
                 </van-collapse>
             </div>
             <div>
-                <van-collapse v-model="activeNames">
-                    <van-collapse-item title="优惠券" value="无可用" name="1">
-                        <p>在线支付</p>
-                        <p>线下支付</p>
-                    </van-collapse-item>
-                </van-collapse>
+                <van-coupon-cell
+                        :coupons="coupons"
+                        :chosen-coupon="chosenCoupon"
+                        @click="showList = true"
+                />
+                <!-- 优惠券列表 -->
+                <van-popup
+                        v-model="showList"
+                        round
+                        position="bottom"
+                        style="height: 90%; padding-top: 4px;"
+                >
+                    <van-coupon-list
+                            :coupons="coupons"
+                            :chosen-coupon="chosenCoupon"
+                            :disabled-coupons="disabledCoupons"
+                            @change="onChange"
+                            @exchange="onExchange"
+                    />
+                </van-popup>
             </div>
             <div>
                 <van-cell title="买家留言" is-link  @click="showPopup" />
@@ -90,6 +104,18 @@
     import list_proimg7 from "../../assets/image/product/list_proimg7.jpg"
     import list_proimg8 from "../../assets/image/product/list_proimg8.jpg"
 
+    const coupon = {
+        available: 1,
+        condition: '无使用门槛\n最多优惠12元',
+        reason: '',
+        value: 150,
+        name: '优惠券名称',
+        startAt: 1489104000,
+        endAt: 1514592000,
+        valueDesc: '1.5',
+        unitDesc: '元',
+    };
+
     export default {
         name: "SubmitOrder",
         data(){
@@ -101,6 +127,10 @@
 
                 activeNames: ['1'],
 
+                chosenCoupon: -1,
+                coupons: [coupon],
+                disabledCoupons: [coupon],
+                showList:false,
             }
         },
         created(){
@@ -120,15 +150,29 @@
             },
             onSubmit(){
                 console.log("ssssssss");
-            }
+            },
+            onChange(index) {
+                this.showList = false;
+                this.chosenCoupon = index;
+            },
+            onExchange(code) {
+                this.coupons.push(coupon);
+                console.log(code);
+            },
         },
     }
 </script>
 
 <style scoped lang="less">
+    .orderTitle{
+         position: fixed;
+         top: 0;
+         width: 100%;
+         z-index: 9999;
+     }
     .orderSite{
+        margin-top: 0.8rem;
         background-color: #fff;
-        border-top: 1px solid #d9cfce;
         color: #888;
         padding-bottom: 0.05rem;
         p:first-of-type{

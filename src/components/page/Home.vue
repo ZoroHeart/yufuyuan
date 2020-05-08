@@ -32,8 +32,8 @@
         </div>
         <div class="">
             <van-grid :column-num="4">
-                <van-grid-item :icon="homeGridIcon[0]" text="每日签到" />
-                <van-grid-item :icon="homeGridIcon[1]" text="充值有礼" />
+                <van-grid-item :icon="homeGridIcon[0]" to="/" text="每日签到" />
+                <van-grid-item :icon="homeGridIcon[1]" to="/voucherCenter" text="充值有礼" />
                 <van-grid-item :icon="homeGridIcon[2]" text="限时秒杀" />
                 <van-grid-item :icon="homeGridIcon[3]" text="团购推荐" />
                 <van-grid-item :icon="homeGridIcon[4]" text="新品上市" />

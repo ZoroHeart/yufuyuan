@@ -125,8 +125,13 @@
     .container{
         .cartTitle{
             background-color: #fff;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
         }
         .cartList{
+            margin-top: 0.8rem;
             background-color: #fff;
             margin-bottom: 2rem;
             padding: 0 0.2rem;

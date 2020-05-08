@@ -10,6 +10,7 @@ import AddressLists from '../components/base/AddressLists.vue'
 import AddressEdits from '../components/base/AddressEdits.vue'
 import ProductDetail from '../components/base/productDetail.vue'
 import SubmitOrder from '../components/page/SubmitOrder.vue'
+import VoucherCenter from '../components/page/voucherCenter.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -67,6 +68,11 @@ const routes = [
     path: '/submitOrder',
     name: 'SubmitOrder',
     component: SubmitOrder
+  },
+  {
+    path: '/voucherCenter',
+    name: 'VoucherCenter',
+    component: VoucherCenter
   }
 
 ]

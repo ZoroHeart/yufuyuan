@@ -22,7 +22,15 @@
                     <p>￥{{prices}}</p>
                     <p>￥{{reducedPrice}}</p>
                     <p>累计销量：{{cumulativeSales}}件</p>
-                    <p><van-icon name="friends-o" color="" size="0.5rem"/></p>
+                    <p>
+                        <van-icon name="friends-o" color="" size="0.5rem" @click="showShare = true"/>
+                        <van-share-sheet
+                                v-model="showShare"
+                                title="立即分享给好友"
+                                :options="options"
+                                @select="onSelect"
+                        />
+                    </p>
                 </div>
                 <div class="productName">{{productName}}</div>
                 <div class="productIntro">{{intro}}</div>
@@ -132,6 +140,15 @@
                 messageConfig: {
                     // 数据结构见下方文档
                 },
+
+                showShare: false,
+                options: [
+                    { name: '微信', icon: 'wechat' },
+                    { name: '微博', icon: 'weibo' },
+                    { name: '复制链接', icon: 'link' },
+                    { name: '分享海报', icon: 'poster' },
+                    { name: '二维码', icon: 'qrcode' },
+                ],
             }
         },
         async created() {
@@ -166,6 +183,10 @@
             },
             onClickButton() {
 
+            },
+            onSelect(option) {
+                console.log(option.name);
+                this.showShare = false;
             },
         }
     }
