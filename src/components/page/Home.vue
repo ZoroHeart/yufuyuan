@@ -35,10 +35,10 @@
                 <van-grid-item :icon="homeGridIcon[0]" to="/" text="每日签到" />
                 <van-grid-item :icon="homeGridIcon[1]" to="/voucherCenter" text="充值有礼" />
                 <van-grid-item :icon="homeGridIcon[2]" text="限时秒杀" />
-                <van-grid-item :icon="homeGridIcon[3]" text="团购推荐" />
+                <van-grid-item :icon="homeGridIcon[3]" to="/groupList" text="团购推荐" />
                 <van-grid-item :icon="homeGridIcon[4]" text="新品上市" />
-                <van-grid-item :icon="homeGridIcon[5]" text="我要兑换" />
-                <van-grid-item :icon="homeGridIcon[6]" text="幸运抽奖" />
+                <van-grid-item :icon="homeGridIcon[5]" to="/redeemCode" text="我要兑换" />
+                <van-grid-item :icon="homeGridIcon[6]" to="/luckyDraw" text="幸运抽奖" />
                 <van-grid-item :icon="homeGridIcon[7]" text="我的订单" />
             </van-grid>
         </div>

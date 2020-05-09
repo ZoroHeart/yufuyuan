@@ -11,6 +11,10 @@ import AddressEdits from '../components/base/AddressEdits.vue'
 import ProductDetail from '../components/base/productDetail.vue'
 import SubmitOrder from '../components/page/SubmitOrder.vue'
 import VoucherCenter from '../components/page/voucherCenter.vue'
+import LuckyDraw from '../components/page/LuckyDraw.vue'
+import RedeemCode from '../components/page/RedeemCode.vue'
+import GroupList from '../components/page/groupList.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -73,6 +77,21 @@ const routes = [
     path: '/voucherCenter',
     name: 'VoucherCenter',
     component: VoucherCenter
+  },
+  {
+    path: '/luckyDraw',
+    name: 'LuckyDraw',
+    component: LuckyDraw
+  },
+  {
+    path: '/redeemCode',
+    name: 'RedeemCode',
+    component: RedeemCode
+  },
+  {
+    path: '/groupList',
+    name: 'GroupList',
+    component: GroupList
   }
 
 ]
