@@ -53,17 +53,17 @@
                 </div>
                 <div>
                     <van-sku
-                            v-model="sukShow"
-                            :sku="sku"
-                            :goods="goods"
-                            :goods-id="goodsId"
-                            :quota="quota"
-                            :quota-used="quotaUsed"
-                            :hide-stock="sku.hide_stock"
-                            :message-config="messageConfig"
-                            @buy-clicked="onBuyClicked"
-                            @add-cart="onAddCartClicked"
-                            :style="{ height: '85%' }"
+                        v-model="sukShow"
+                        :sku="sku"
+                        :goods="goods"
+                        :goods-id="goodsId"
+                        :quota="quota"
+                        :quota-used="quotaUsed"
+                        :hide-stock="sku.hide_stock"
+                        :message-config="messageConfig"
+                        @buy-clicked="onBuyClicked"
+                        @add-cart="onAddCartClicked"
+                        :style="{ height: '85%' }"
                     />
                 </div>
                 <div class="selectAddress">
@@ -137,6 +137,9 @@
                 goods: {
                     // 数据结构见下方文档
                 },
+                goodsId:"",
+                quota:0,
+                quotaUsed:0,
                 messageConfig: {
                     // 数据结构见下方文档
                 },
@@ -188,6 +191,8 @@
                 console.log(option.name);
                 this.showShare = false;
             },
+            onBuyClicked(){},
+            onAddCartClicked(){}
         }
     }
 </script>

@@ -15,7 +15,7 @@ import LuckyDraw from '../components/page/LuckyDraw.vue'
 import RedeemCode from '../components/page/RedeemCode.vue'
 import GroupList from '../components/page/groupList.vue'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -94,10 +94,16 @@ const routes = [
     component: GroupList
   }
 
-]
+];
 
 const router = new VueRouter({
   routes
-})
+});
+
+router.beforeEach((to,from,next)=>{
+  console.log(to);
+  console.log(from);
+  next();
+});
 
 export default router
